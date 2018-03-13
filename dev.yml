@@ -1,0 +1,36 @@
+name: haul
+
+type: rails
+
+up:
+  - homebrew:
+    - openssl
+    - shopify/shopify/mysql-client:
+        or:        [mysql]
+        conflicts: [mysql-connector-c]
+    # - another_package
+  - ruby: 2.4.2
+  - bundler
+  - railgun
+  - database:
+      bootstrap: bin/rails db:create db:schema:load
+      migrate: bin/rails db:migrate db:test:prepare
+      host: haul.railgun
+      user: root
+      password: ''
+      database: haul_development
+
+server:
+  port: 21376
+
+commands:
+  console: bin/rails console
+  test:
+    syntax:
+      argument: file
+      optional: args...
+    run:    bin/rails test
+
+# These use fuzzy-matching, so you can (e.g.) `dev open app`
+open:
+  "My Application": https://haul.myshopify.io
