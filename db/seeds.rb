@@ -41,9 +41,3 @@ emma_cart = Cart.create(user: emma)
 
 emma_cart.products << on_tshirt
 emma_cart.products << on_sweater
-
-
-
-
-
-

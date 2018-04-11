@@ -16,7 +16,6 @@ class VariableTest < ActiveSupport::TestCase
     assert_not variable.save
   end
 
-
   test 'product presence' do
     variable = Variable.new(store: old_navy, option: 'green')
     assert_not variable.save
