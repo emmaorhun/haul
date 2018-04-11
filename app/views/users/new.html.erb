@@ -1,0 +1,10 @@
+<% if @user.errors.any? %>
+  <h1><%=@user.errors.full_messages_for(:email).first%></h1>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <%= f.email_field :email %>
+  <%= f.text_field :username %>
+  <%= f.password_field :password %>
+  <%= f.submit %>
+<% end %>
