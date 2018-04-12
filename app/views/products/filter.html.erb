@@ -1,4 +1,12 @@
-<h1>Here is a list of all green products currently available:</h1>
-<% for x in @allProducts do %>
-  <p><%= x%></p>
-<% end %>
+
+<div style = "font-family: Comic Sans MS">
+  <h1>Here is a list of all green products currently available:</h1>
+  <% for x in @greenProducts do %>
+    <p style = "color: green"><%= x.name %></p>
+  <% end %>
+
+  <h1>Here is a list of all products at Rideau Mall</h1>
+    <% for x in @rideauProducts do %>
+      <p><%= x.name %></p>
+  <% end %>
+</div>
