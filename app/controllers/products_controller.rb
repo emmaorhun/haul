@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   end
 
   def filter
-    @allProducts = Variable.find(params[:option])
+    @allProducts = Product.joins('INNER JOIN product_profiles ON product_profiles.product_id = products.id')
+                          .joins('INNER JOIN variables ON variables.product_id = products.id')
   end
 
   def delete

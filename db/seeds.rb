@@ -7,7 +7,6 @@ User.destroy_all
 Cart.destroy_all
 ProductProfile.destroy_all
 
-
 bayshore = Mall.create(name: "Bayshore Shopping Center")
 rideau = Mall.create(name: "Rideau Center")
 
