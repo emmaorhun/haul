@@ -1,0 +1,7 @@
+<h1>Here are the contents of <%=@user.username%>'s cart</h1>
+
+<% for x in @cart_contents do %>
+
+  <p style = "color: green"><%= x.name%></p>
+
+<% end %>

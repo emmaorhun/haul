@@ -20,6 +20,7 @@ class ProductsController < ApplicationController
                                     .joins('INNER JOIN stores ON products.store_id = stores.id')
                                     .joins('INNER JOIN malls on stores.mall_id = malls.id')
                                     .where('malls.name = "Rideau Center"')
+
   end
 
   def delete
