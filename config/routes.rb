@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get 'products/filter'
   get 'products/delete/:id' => 'products#delete'
 
-  get 'users/:id' => 'users#cart'
+  get 'users/' => 'users#index'
+  get 'users/create' => 'users#new'
+  get 'users/cart/:id' => 'users#cart'
 
   resources :users
 

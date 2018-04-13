@@ -6,7 +6,7 @@ class AddingStockToProducts < ActiveRecord::Migration[5.1]
   end
 
   def down
-    t.drop_table products
+    remove_column :products, :stocks
   end
 
 end
